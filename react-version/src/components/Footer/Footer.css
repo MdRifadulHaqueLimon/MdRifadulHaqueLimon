@@ -1,0 +1,55 @@
+/* Footer Component Styles */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 0;
+  background: var(--bg-secondary);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+
+.footer-copy span {
+  color: var(--accent-light);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all .25s;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+  background: var(--accent-dim);
+  transform: translateY(-3px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
