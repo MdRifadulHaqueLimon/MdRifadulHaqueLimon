@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Rifadul Haque Limon | MERN Stack Developer</title>
+  <title>Md. Rifadul Haque Limon | Frontend Web Developer</title>
+  <!-- Favicon Code -->
+  <link rel="icon" type="Favicon" href="icons_img/portfolio.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -21,23 +24,231 @@
     <div class="nav-inner">
       <a href="#hero" class="logo">Limon<span>&lt;/&gt;</span></a>
       <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">
+          <!-- BLANK: <img src="icons_img/about-icon.svg" class="nav-link-icon" alt=""> -->
+          <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          About
+        </a>
+        <a href="#skills">
+          <!-- BLANK: <img src="icons_img/skills-icon.svg" class="nav-link-icon" alt=""> -->
+          <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Skills
+        </a>
+        <a href="#projects">
+          <!-- BLANK: <img src="icons_img/projects-icon.svg" class="nav-link-icon" alt=""> -->
+          <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Projects
+        </a>
+        <a href="#contact">
+          <!-- BLANK: <img src="icons_img/contact-icon.svg" class="nav-link-icon" alt=""> -->
+          <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact
+        </a>
       </nav>
+
+      <!-- ===== LANGUAGE DROPDOWN ===== -->
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-btn" id="langBtn" aria-label="Select language" aria-expanded="false">
+          <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span id="langLabel">EN</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="listbox">
+          <div class="lang-menu-header">Select Language</div>
+          <ul>
+            <li class="lang-option active" data-lang="en" data-label="EN" role="option"><img src="https://flagcdn.com/w40/us.png" class="lang-flag" alt="US">English<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="bn" data-label="বাং" role="option"><img src="https://flagcdn.com/w40/bd.png" class="lang-flag" alt="BD">বাংলা<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="hi" data-label="हिं" role="option"><img src="https://flagcdn.com/w40/in.png" class="lang-flag" alt="IN">हिन्दी<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ar" data-label="عر" role="option"><img src="https://flagcdn.com/w40/sa.png" class="lang-flag" alt="SA">العربية<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="zh-CN" data-label="中文" role="option"><img src="https://flagcdn.com/w40/cn.png" class="lang-flag" alt="CN">中文 (简体)<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="zh-TW" data-label="繁中" role="option"><img src="https://flagcdn.com/w40/tw.png" class="lang-flag" alt="TW">中文 (繁體)<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ja" data-label="日本" role="option"><img src="https://flagcdn.com/w40/jp.png" class="lang-flag" alt="JP">日本語<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ko" data-label="한국" role="option"><img src="https://flagcdn.com/w40/kr.png" class="lang-flag" alt="KR">한국어<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="de" data-label="DE" role="option"><img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="DE">Deutsch<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="fr" data-label="FR" role="option"><img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="FR">Français<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="es" data-label="ES" role="option"><img src="https://flagcdn.com/w40/es.png" class="lang-flag" alt="ES">Español<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="pt" data-label="PT" role="option"><img src="https://flagcdn.com/w40/pt.png" class="lang-flag" alt="PT">Português<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="it" data-label="IT" role="option"><img src="https://flagcdn.com/w40/it.png" class="lang-flag" alt="IT">Italiano<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ru" data-label="RU" role="option"><img src="https://flagcdn.com/w40/ru.png" class="lang-flag" alt="RU">Русский<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="tr" data-label="TR" role="option"><img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="TR">Türkçe<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="nl" data-label="NL" role="option"><img src="https://flagcdn.com/w40/nl.png" class="lang-flag" alt="NL">Nederlands<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="pl" data-label="PL" role="option"><img src="https://flagcdn.com/w40/pl.png" class="lang-flag" alt="PL">Polski<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="sv" data-label="SV" role="option"><img src="https://flagcdn.com/w40/se.png" class="lang-flag" alt="SE">Svenska<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="no" data-label="NO" role="option"><img src="https://flagcdn.com/w40/no.png" class="lang-flag" alt="NO">Norsk<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="da" data-label="DA" role="option"><img src="https://flagcdn.com/w40/dk.png" class="lang-flag" alt="DK">Dansk<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="fi" data-label="FI" role="option"><img src="https://flagcdn.com/w40/fi.png" class="lang-flag" alt="FI">Suomi<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="el" data-label="EL" role="option"><img src="https://flagcdn.com/w40/gr.png" class="lang-flag" alt="GR">Ελληνικά<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="cs" data-label="CS" role="option"><img src="https://flagcdn.com/w40/cz.png" class="lang-flag" alt="CZ">Čeština<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ro" data-label="RO" role="option"><img src="https://flagcdn.com/w40/ro.png" class="lang-flag" alt="RO">Română<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="hu" data-label="HU" role="option"><img src="https://flagcdn.com/w40/hu.png" class="lang-flag" alt="HU">Magyar<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="uk" data-label="UK" role="option"><img src="https://flagcdn.com/w40/ua.png" class="lang-flag" alt="UA">Українська<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="fa" data-label="فا" role="option"><img src="https://flagcdn.com/w40/ir.png" class="lang-flag" alt="IR">فارسی<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ur" data-label="اردو" role="option"><img src="https://flagcdn.com/w40/pk.png" class="lang-flag" alt="PK">اردو<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="id" data-label="ID" role="option"><img src="https://flagcdn.com/w40/id.png" class="lang-flag" alt="ID">Bahasa Indonesia<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="ms" data-label="MS" role="option"><img src="https://flagcdn.com/w40/my.png" class="lang-flag" alt="MY">Bahasa Melayu<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="th" data-label="TH" role="option"><img src="https://flagcdn.com/w40/th.png" class="lang-flag" alt="TH">ภาษาไทย<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="vi" data-label="VI" role="option"><img src="https://flagcdn.com/w40/vn.png" class="lang-flag" alt="VN">Tiếng Việt<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="tl" data-label="TL" role="option"><img src="https://flagcdn.com/w40/ph.png" class="lang-flag" alt="PH">Filipino<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="sw" data-label="SW" role="option"><img src="https://flagcdn.com/w40/ke.png" class="lang-flag" alt="KE">Kiswahili<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="lang-option" data-lang="af" data-label="AF" role="option"><img src="https://flagcdn.com/w40/za.png" class="lang-flag" alt="ZA">Afrikaans<svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+          </ul>
+        </div>
+      </div>
+      <!-- ===== / LANGUAGE DROPDOWN ===== -->
+
       <a href="#contact" class="btn btn-primary nav-cta" style="padding:10px 22px;font-size:.82rem;">Hire Me</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
+  <div class="mob-overlay" id="mobOverlay" onclick="closeMobile()"></div>
   <div class="mobile-nav" id="mobileNav">
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#skills" onclick="closeMobile()">Skills</a>
-    <a href="#projects" onclick="closeMobile()">Projects</a>
-    <a href="#contact" onclick="closeMobile()">Contact</a>
-    <a href="#contact" onclick="closeMobile()" style="color:var(--accent-light);">Hire Me →</a>
+  <div class="mob-nav-scroll">
+
+    <!-- ── PROFILE HEADER ── -->
+    <div class="mob-profile-header">
+      <div class="mob-avatar">
+        <!-- BLANK: Replace src with your profile image. E.g: src="icons_img/profile.jpg" -->
+        <!-- If no image, initials "RL" will show as fallback -->
+        <span class="mob-avatar-initials">RL</span>
+      </div>
+      <div class="mob-profile-info">
+        <div class="mob-profile-name">Md. Rifadul <span>Limon</span></div>
+        <div class="mob-profile-role">Frontend Web Developer</div>
+      </div>
+      <button class="mobile-nav-close" onclick="closeMobile()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- ── NAV LINKS ── -->
+    <nav class="mobile-nav-links">
+      <a href="#hero"     onclick="closeMobile()" class="mob-link">
+        <!-- BLANK ICON SLOT: Download icon & add: <img src="icons_img/home-icon.svg" class="mob-link-svg" alt=""> -->
+        <span class="mob-link-icon-wrap">
+          <svg class="mob-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </span>
+        <span class="mob-link-text">Home</span>
+      </a>
+      <a href="#about"    onclick="closeMobile()" class="mob-link">
+        <!-- BLANK ICON SLOT: <img src="icons_img/about-icon.svg" class="mob-link-svg" alt=""> -->
+        <span class="mob-link-icon-wrap">
+          <svg class="mob-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </span>
+        <span class="mob-link-text">About</span>
+      </a>
+      <a href="#skills"   onclick="closeMobile()" class="mob-link">
+        <!-- BLANK ICON SLOT: <img src="icons_img/skills-icon.svg" class="mob-link-svg" alt=""> -->
+        <span class="mob-link-icon-wrap">
+          <svg class="mob-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span class="mob-link-text">Skills</span>
+      </a>
+      <a href="#projects" onclick="closeMobile()" class="mob-link">
+        <!-- BLANK ICON SLOT: <img src="icons_img/projects-icon.svg" class="mob-link-svg" alt=""> -->
+        <span class="mob-link-icon-wrap">
+          <svg class="mob-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </span>
+        <span class="mob-link-text">Projects</span>
+      </a>
+      <a href="#contact"  onclick="closeMobile()" class="mob-link">
+        <!-- BLANK ICON SLOT: <img src="icons_img/contact-icon.svg" class="mob-link-svg" alt=""> -->
+        <span class="mob-link-icon-wrap">
+          <svg class="mob-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        <span class="mob-link-text">Contact</span>
+      </a>
+    </nav>
+
+    <!-- ── SOCIAL ICONS ── -->
+    <div class="mob-social-row">
+      <a href="https://github.com/MdRifadulHaqueLimon" target="_blank" class="mob-social" title="GitHub">
+        <!-- BLANK: Replace with downloaded GitHub icon: <img src="icons_img/github.svg" width="18" height="18" alt="GitHub"> -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/mdrifadulhaquelimon/" target="_blank" class="mob-social" title="LinkedIn">
+        <!-- BLANK: Replace with downloaded LinkedIn icon: <img src="icons_img/linkedin.svg" width="18" height="18" alt="LinkedIn"> -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&to=mdrifadulhaquelimon@gmail.com" target="_blank" class="mob-social" title="Email">
+        <!-- BLANK: Replace with downloaded Email icon: <img src="icons_img/email.svg" width="18" height="18" alt="Email"> -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+      </a>
+    </div>
+
+    <!-- ── VIEW MY WORK BUTTON ── -->
+    <div class="mob-viewwork-wrap">
+      <a href="#projects" onclick="closeMobile()" class="mob-viewwork-btn">View My Work →</a>
+    </div>
+
+    <!-- ── RESUME BUTTON (Lime/Green — bottom position) ── -->
+    <div class="mob-resume-wrap">
+      <a href="#" class="mob-resume-btn" download>
+        <!-- BLANK: Replace href="#" with your actual resume file path. E.g: href="resume/limon-resume.pdf" -->
+        <svg class="mob-resume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Resume
+      </a>
+    </div>
+
+    <!-- Mobile Language Selector — Custom Dropdown -->
+    <div class="mobile-lang-row">
+      <span class="mobile-lang-label">🌐 Language:</span>
+      <div class="mob-lang-dropdown" id="mobLangDropdown">
+        <button class="mob-lang-btn" id="mobLangBtn" aria-expanded="false">
+          <img src="https://flagcdn.com/w40/us.png" class="mob-lang-flag" id="mobLangFlag" alt="">
+          <span class="mob-lang-txt" id="mobLangTxt">English</span>
+          <svg class="mob-lang-chevron" id="mobLangChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mob-lang-menu" id="mobLangMenu">
+          <div class="mob-lang-menu-header">Select Language</div>
+          <ul>
+            <li class="mob-lang-opt active" data-lang="en" data-label="EN" data-name="English" data-flag="us"><img src="https://flagcdn.com/w40/us.png" class="mob-lang-opt-flag" alt="">English<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="bn" data-label="বাং" data-name="বাংলা" data-flag="bd"><img src="https://flagcdn.com/w40/bd.png" class="mob-lang-opt-flag" alt="">বাংলা<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="hi" data-label="हिं" data-name="हिन्दी" data-flag="in"><img src="https://flagcdn.com/w40/in.png" class="mob-lang-opt-flag" alt="">हिन्दी<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ar" data-label="عر" data-name="العربية" data-flag="sa"><img src="https://flagcdn.com/w40/sa.png" class="mob-lang-opt-flag" alt="">العربية<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="zh-CN" data-label="中文" data-name="中文 (简体)" data-flag="cn"><img src="https://flagcdn.com/w40/cn.png" class="mob-lang-opt-flag" alt="">中文 (简体)<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="zh-TW" data-label="繁中" data-name="中文 (繁體)" data-flag="tw"><img src="https://flagcdn.com/w40/tw.png" class="mob-lang-opt-flag" alt="">中文 (繁體)<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ja" data-label="日本" data-name="日本語" data-flag="jp"><img src="https://flagcdn.com/w40/jp.png" class="mob-lang-opt-flag" alt="">日本語<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ko" data-label="한국" data-name="한국어" data-flag="kr"><img src="https://flagcdn.com/w40/kr.png" class="mob-lang-opt-flag" alt="">한국어<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="de" data-label="DE" data-name="Deutsch" data-flag="de"><img src="https://flagcdn.com/w40/de.png" class="mob-lang-opt-flag" alt="">Deutsch<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="fr" data-label="FR" data-name="Français" data-flag="fr"><img src="https://flagcdn.com/w40/fr.png" class="mob-lang-opt-flag" alt="">Français<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="es" data-label="ES" data-name="Español" data-flag="es"><img src="https://flagcdn.com/w40/es.png" class="mob-lang-opt-flag" alt="">Español<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="pt" data-label="PT" data-name="Português" data-flag="pt"><img src="https://flagcdn.com/w40/pt.png" class="mob-lang-opt-flag" alt="">Português<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="it" data-label="IT" data-name="Italiano" data-flag="it"><img src="https://flagcdn.com/w40/it.png" class="mob-lang-opt-flag" alt="">Italiano<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ru" data-label="RU" data-name="Русский" data-flag="ru"><img src="https://flagcdn.com/w40/ru.png" class="mob-lang-opt-flag" alt="">Русский<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="tr" data-label="TR" data-name="Türkçe" data-flag="tr"><img src="https://flagcdn.com/w40/tr.png" class="mob-lang-opt-flag" alt="">Türkçe<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="nl" data-label="NL" data-name="Nederlands" data-flag="nl"><img src="https://flagcdn.com/w40/nl.png" class="mob-lang-opt-flag" alt="">Nederlands<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="pl" data-label="PL" data-name="Polski" data-flag="pl"><img src="https://flagcdn.com/w40/pl.png" class="mob-lang-opt-flag" alt="">Polski<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="sv" data-label="SV" data-name="Svenska" data-flag="se"><img src="https://flagcdn.com/w40/se.png" class="mob-lang-opt-flag" alt="">Svenska<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="no" data-label="NO" data-name="Norsk" data-flag="no"><img src="https://flagcdn.com/w40/no.png" class="mob-lang-opt-flag" alt="">Norsk<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="da" data-label="DA" data-name="Dansk" data-flag="dk"><img src="https://flagcdn.com/w40/dk.png" class="mob-lang-opt-flag" alt="">Dansk<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="fi" data-label="FI" data-name="Suomi" data-flag="fi"><img src="https://flagcdn.com/w40/fi.png" class="mob-lang-opt-flag" alt="">Suomi<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="el" data-label="EL" data-name="Ελληνικά" data-flag="gr"><img src="https://flagcdn.com/w40/gr.png" class="mob-lang-opt-flag" alt="">Ελληνικά<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="cs" data-label="CS" data-name="Čeština" data-flag="cz"><img src="https://flagcdn.com/w40/cz.png" class="mob-lang-opt-flag" alt="">Čeština<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ro" data-label="RO" data-name="Română" data-flag="ro"><img src="https://flagcdn.com/w40/ro.png" class="mob-lang-opt-flag" alt="">Română<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="hu" data-label="HU" data-name="Magyar" data-flag="hu"><img src="https://flagcdn.com/w40/hu.png" class="mob-lang-opt-flag" alt="">Magyar<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="uk" data-label="UK" data-name="Українська" data-flag="ua"><img src="https://flagcdn.com/w40/ua.png" class="mob-lang-opt-flag" alt="">Українська<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="fa" data-label="فا" data-name="فارسی" data-flag="ir"><img src="https://flagcdn.com/w40/ir.png" class="mob-lang-opt-flag" alt="">فارسی<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ur" data-label="اردو" data-name="اردو" data-flag="pk"><img src="https://flagcdn.com/w40/pk.png" class="mob-lang-opt-flag" alt="">اردو<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="id" data-label="ID" data-name="Bahasa Indonesia" data-flag="id"><img src="https://flagcdn.com/w40/id.png" class="mob-lang-opt-flag" alt="">Bahasa Indonesia<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="ms" data-label="MS" data-name="Bahasa Melayu" data-flag="my"><img src="https://flagcdn.com/w40/my.png" class="mob-lang-opt-flag" alt="">Bahasa Melayu<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="th" data-label="TH" data-name="ภาษาไทย" data-flag="th"><img src="https://flagcdn.com/w40/th.png" class="mob-lang-opt-flag" alt="">ภาษาไทย<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="vi" data-label="VI" data-name="Tiếng Việt" data-flag="vn"><img src="https://flagcdn.com/w40/vn.png" class="mob-lang-opt-flag" alt="">Tiếng Việt<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="tl" data-label="TL" data-name="Filipino" data-flag="ph"><img src="https://flagcdn.com/w40/ph.png" class="mob-lang-opt-flag" alt="">Filipino<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="sw" data-label="SW" data-name="Kiswahili" data-flag="ke"><img src="https://flagcdn.com/w40/ke.png" class="mob-lang-opt-flag" alt="">Kiswahili<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+            <li class="mob-lang-opt" data-lang="af" data-label="AF" data-name="Afrikaans" data-flag="za"><img src="https://flagcdn.com/w40/za.png" class="mob-lang-opt-flag" alt="">Afrikaans<svg class="mob-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div><!-- /mob-nav-scroll -->
   </div>
 </header>
 
@@ -50,24 +261,28 @@
         <div class="hero-badge reveal">
           <span class="dot"></span> Available for Freelance
         </div>
-        <h1 class="hero-title reveal delay-1">
-          Crafting <span class="accent">MERN Stack</span><br>
-          <span class="outline">Experiences</span>
-        </h1>
-        <p class="hero-bio reveal delay-2">
-          Hi, I'm <strong style="color:var(--text-primary);">Md. Rifadul Haque Limon</strong> — a passionate Full-Stack MERN developer building modern, responsive & scalable web applications with clean code and great UX.
-        </p>
-        <div class="hero-actions reveal delay-3">
 
-          <!-- MY CV -->
-          
+        <!-- ✅ NAME ONE LINE -->
+        <h1 class="hero-title reveal delay-1">
+          MD Rifadul <span class="accent">Haque</span> <span class="outline">Limon</span>
+        </h1>
+
+        <!-- ✅ TYPING TEXT -->
+        <div class="hero-typing reveal delay-2">
+          &gt; <span id="typingText"></span><span class="typing-cursor">|</span>
+        </div>
+
+        <p class="hero-bio reveal delay-3">
+          Hi, I'm <strong style="color:var(--text-primary);">Md. Rifadul Haque Limon</strong> — a passionate Frontend Web Developer & Shopify Store Designer building modern, responsive, and visually engaging web interfaces with clean code and great UX.
+        </p>
+        <div class="hero-actions reveal delay-4">
           <a href="MY-CV/Limon-Cv (1).pdf" class="btn btn-primary">
             <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
+            Resume
           </a>
           <a href="#projects" class="btn btn-ghost">View Projects</a>
         </div>
-        <div class="hero-socials reveal delay-4">
+        <div class="hero-socials reveal delay-5">
           <!-- GitHub -->
           <a href="https://github.com/MdRifadulHaqueLimon" target="_blank" rel="noopener" class="social-link" title="GitHub">
             <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -77,7 +292,7 @@
             <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
           <!-- Email -->
-          <a href="https://mail.google.com/mail/?view=cm&to=mdrifadulhaquelimon@gmail.com" 
+          <a href="https://mail.google.com/mail/?view=cm&to=mdrifadulhaquelimon@gmail.com"
    target="_blank" rel="noopener" class="social-link" title="Email">
             <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
           </a>
@@ -92,7 +307,7 @@
             <img src="img/limon.png" alt="Md. Rifadul Haque Limon" />
           </div>
         </div>
-        <div class="floating-badge fb-1"><span>Expertise</span> in MERN</div>
+        <div class="floating-badge fb-1"><span>Frontend </span>Developer</div>
         <div class="floating-badge fb-2"><span>Love</span> Clean Code</div>
       </div>
     </div>
@@ -102,78 +317,211 @@
 <!-- ===== ABOUT ===== -->
 <section id="about">
   <div class="container">
-    <div class="about-grid">
-      <!-- IMAGE -->
-      <div class="about-image-wrap reveal-left">
-        <div class="about-image-frame">
-          <img src="img/limon.png" alt="Md. Rifadul Haque Limon" />
+    <div class="section-head" style="text-align:center;">
+      <span class="section-label reveal">Who I Am</span>
+      <h2 class="section-title reveal delay-1">About <span style="color:var(--accent-light);">Me</span></h2>
+      <p class="section-sub reveal delay-2" style="margin:0 auto;">A passionate web developer crafting clean, performant digital experiences.</p>
+    </div>
+    <div class="divider"><div class="divider-dot"></div></div>
+
+    <!-- CURRENT POSITION CARD -->
+    <!-- <div class="about-glass-card reveal" style="margin-bottom:20px;">
+      <div class="agc-header">
+        <div class="agc-icon agc-icon-work">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
         </div>
-        <div class="about-image-card">
-          <div class="number">15+</div>
-          <div class="label">Tech Skills</div>
+        <span class="agc-label">Current Position</span>
+      </div>
+      <div class="agc-position-grid">
+        <div class="agc-position-left">
+          <div class="agc-position-title">
+            Frontend Developer
+            <span class="agc-badge-working">● Open to Work</span>
+          </div>
+          <div class="agc-company">Freelance &amp; Personal Projects</div>
+          <div class="agc-meta">
+            <span>📍 Bangladesh</span>
+            <span>📅 2023 – Present</span>
+          </div>
+          <p class="agc-desc">Building modern, responsive web interfaces and fully configured Shopify storefronts for clients. Specializing in React.js, Tailwind CSS, and no-code e-commerce solutions with clean UI/UX implementations.</p>
+        </div>
+        <div class="agc-tech-at-work">
+          <div class="agc-tech-label">TECH AT WORK</div>
+          <div class="agc-tech-pills">
+            <span class="agc-tech-pill"><span class="agc-tech-dot" style="background:#61dafb;"></span>React</span>
+            <span class="agc-tech-pill"><span class="agc-tech-dot" style="background:#38bdf8;"></span>Tailwind</span>
+            <span class="agc-tech-pill"><span class="agc-tech-dot" style="background:#f7df1e;"></span>JS</span>
+            <span class="agc-tech-pill"><span class="agc-tech-dot" style="background:#96bf48;"></span>Shopify</span>
+          </div>
         </div>
       </div>
+    </div> -->
 
-      <!-- TEXT SIDE -->
-      <div class="reveal-right">
-        <span class="section-label">Get to know me</span>
-        <h2 class="section-title">I Build Web<br>Solutions <span style="color:var(--accent-light);">That Matter</span></h2>
-        <p style="color:var(--text-muted);margin-bottom:16px;font-size:.95rem;">
-          I'm <strong style="color:var(--text-primary);"> Md. Rifadul Haque Limon</strong>, a dedicated Full-Stack MERN developer currently pursuing my Diploma in Computer Science and Engineering (7th Semester) at <strong style="color:var(--accent-light);">Borak Polytechnic Institute</strong>.
+    <!-- EDUCATION + TECH JOURNEY ROW -->
+    <div class="about-two-col" style="margin-bottom:20px;">
+
+      <!-- EDUCATION CARD -->
+      <div class="about-glass-card reveal">
+        <div class="agc-header">
+          <div class="agc-icon agc-icon-edu">
+            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <span class="agc-label">Education</span>
+        </div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:14px;">
+          Pursuing <strong style="color:var(--accent-light);">Diploma in Computer Science</strong> at Borak Polytechnic Institute — currently in 7th Semester.
         </p>
-        <p style="color:var(--text-muted);margin-bottom:16px;font-size:.95rem;">
-          My passion lies in transforming ideas into scalable, performant web applications — from pixel-perfect frontends with React.js to robust Node.js/Express APIs backed by MongoDB. I care deeply about code quality, clean architecture, and a delightful user experience.
+        <ul class="agc-list agc-list-purple">
+          <li>CGPA: 3.75 / 4.00 — Top 5% of class</li>
+          <li>Expected Graduation: December 2026</li>
+          <li>Core subjects: DSA, Networking, Web Technology</li>
+        </ul>
+      </div>
+
+      <!-- TECH JOURNEY CARD -->
+      <!-- <div class="about-glass-card reveal">
+        <div class="agc-header">
+          <div class="agc-icon agc-icon-tech">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="agc-label">Tech Journey</span>
+        </div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:14px;">
+          Passionate about building <strong style="color:var(--accent-light);">modern web applications</strong>
         </p>
-        <p style="color:var(--text-muted);font-size:.95rem;">
-          Whether it's a startup MVP or a complex dashboard, I bring precision, consistency, and a problem-solver mindset to every project I touch.
+        <ul class="agc-list agc-list-cyan">
+          <li>500+ hours of coding in 2023–2025</li>
+          <li>10+ frontend & e-commerce projects delivered</li>
+          <li>Worked with clients from Bangladesh & abroad</li>
+        </ul>
+      </div> -->
+
+      <div class="about-glass-card reveal">
+        <div class="agc-header">
+          <div class="agc-icon agc-icon-tech">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="agc-label">Current Focus</span>
+        </div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:14px;">
+          Focused on Frontend <strong style="color:var(--accent-light);">Development & E-commerce</strong>
         </p>
-        <div class="about-pills">
-          <span class="pill">🎓 CSE Diploma</span>
-          <span class="pill">⚛️ React.js</span>
-          <span class="pill">🟢 Node.js</span>
-          <span class="pill">🍃 MongoDB</span>
-          <span class="pill">🌐 Freelancer</span>
-          <span class="pill">📍 Bangladesh</span>
+        <ul class="agc-list agc-list-cyan">
+          <li>Crafting responsive web apps using React.js & Tailwind CSS</li>
+          <li>Familiar with API integration and testing using Postman</li>
+          <li>Helping businesses go online with complete Shopify store setups</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WHAT I BRING CARD -->
+    <div class="about-glass-card reveal">
+      <div class="agc-header">
+        <div class="agc-icon agc-icon-heart">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="agc-label">What I Bring as a Professional</span>
+      </div>
+      <div class="agc-bring-grid">
+        <div class="agc-bring-col">
+          <div class="agc-bring-title" style="color:#a78bfa;">CLEAN CODE</div>
+          <ul class="agc-list agc-list-purple">
+            <li>Readable &amp; maintainable</li>
+            <li>Component-driven design</li>
+            <li>DRY principles</li>
+          </ul>
+        </div>
+        <div class="agc-bring-col">
+          <div class="agc-bring-title" style="color:#4ade80;">PERFORMANCE</div>
+          <ul class="agc-list agc-list-green">
+            <li>Optimized rendering</li>
+            <li>Lazy loading</li>
+            <li>Fast load times</li>
+          </ul>
+        </div>
+        <div class="agc-bring-col">
+          <div class="agc-bring-title" style="color:#fb923c;">COLLABORATION</div>
+          <ul class="agc-list agc-list-orange">
+            <li>Git &amp; version control</li>
+            <li>Client communication</li>
+            <li>On-time delivery</li>
+          </ul>
+        </div>
+        <div class="agc-bring-col">
+          <div class="agc-bring-title" style="color:#c084fc;">GROWTH MINDSET</div>
+          <ul class="agc-list agc-list-violet">
+            <li>Constantly learning</li>
+            <li>Adapts to new tech</li>
+            <li>Open to feedback</li>
+          </ul>
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
 
 <!-- ===== SKILLS ===== -->
 <section id="skills">
   <div class="container">
     <div class="section-head" style="text-align:center;">
-      <span class="section-label reveal">My Toolbox</span>
-      <h2 class="section-title reveal delay-1">Technologies &amp; Skills</h2>
-      <p class="section-sub reveal delay-2" style="margin:0 auto;">
-        The tools and technologies I use to craft modern web applications end-to-end.
-      </p>
+      <span class="section-label reveal">Tech Stack</span>
+      <h2 class="section-title reveal delay-1">My <span style="color:var(--accent-light);">Skills</span></h2>
+      <p class="section-sub reveal delay-2" style="margin:0 auto;">Technologies I've worked with and mastered throughout my development journey.</p>
     </div>
     <div class="divider"><div class="divider-dot"></div></div>
+
+    <!-- SKILL FILTER TABS -->
+    <div class="skill-filter-tabs" id="skillFilterTabs">
+      <button class="skill-filter-btn active" data-filter="all">All</button>
+      <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
+      <!-- <button class="skill-filter-btn" data-filter="backend">Backend</button>
+      <button class="skill-filter-btn" data-filter="database">Database</button> -->
+      <button class="skill-filter-btn" data-filter="tools">Tools</button>
+      <button class="skill-filter-btn" data-filter="e-commerce">E-commerce</button>
+    </div>
+
+    <!-- SKILLS GRID -->
     <div class="skills-grid" id="skillsGrid"></div>
-  </div>
+
+    <!-- STATS ROW -->
+    <!-- <div class="skills-stats reveal">
+      <div class="skill-stat-card">
+        <div class="skill-stat-num">19<span>+</span></div>
+        <div class="skill-stat-label">Technologies</div>
+      </div>
+      <div class="skill-stat-card">
+        <div class="skill-stat-num">10<span>+</span></div>
+        <div class="skill-stat-label">Projects Built</div>
+      </div>
+      <div class="skill-stat-card">
+        <div class="skill-stat-num">6<span>+</span></div>
+        <div class="skill-stat-label">Shopify Stores</div>
+      </div>
+      <div class="skill-stat-card">
+        <div class="skill-stat-num">2<span>+</span></div>
+        <div class="skill-stat-label">Years Learning</div>
+      </div>
+    </div>
+  </div> -->
 </section>
 
 <!-- ===== PROJECTS ===== -->
 <section id="projects">
   <div class="container">
     <div class="section-head" style="text-align:center;">
-      <span class="section-label reveal">Portfolio</span>
-      <h2 class="section-title reveal delay-1">My Projects</h2>
-      <p class="section-sub reveal delay-2" style="margin:0 auto;">
-        A curated selection of what I've built. Each project tells a story of problem-solving.
-      </p>
+      <span class="section-label reveal">What I've Built</span>
+      <h2 class="section-title reveal delay-1">Featured <span style="color:var(--accent-light);">Projects</span></h2>
+      <p class="section-sub reveal delay-2" style="margin:0 auto;">A selection of my recent work across frontend, backend, and full-stack projects.</p>
     </div>
     <div class="divider"><div class="divider-dot"></div></div>
-
-    <div class="filter-tabs reveal" id="filterTabs">
+    <div class="filter-tabs" id="filterTabs">
       <button class="filter-tab active" data-filter="all">All</button>
-      <button class="filter-tab" data-filter="fullstack">Full Stack</button>
       <button class="filter-tab" data-filter="frontend">Frontend</button>
       <button class="filter-tab" data-filter="backend">Backend</button>
+      <button class="filter-tab" data-filter="fullstack">Full Stack</button>
     </div>
-
     <div class="projects-grid" id="projectsGrid"></div>
   </div>
 </section>
@@ -182,112 +530,198 @@
 <section id="contact">
   <div class="container">
     <div class="section-head" style="text-align:center;">
-      <span class="section-label reveal">Let's Talk</span>
-      <h2 class="section-title reveal delay-1">Get In Touch</h2>
-      <p class="section-sub reveal delay-2" style="margin:0 auto;">
-        Have a project in mind or just want to say hi? My inbox is always open.
-      </p>
+      <span class="section-label reveal">Get In Touch</span>
+      <h2 class="section-title reveal delay-1">Contact <span style="color:var(--accent-light);">Me</span></h2>
+      <p class="section-sub reveal delay-2" style="margin:0 auto;">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
     </div>
     <div class="divider"><div class="divider-dot"></div></div>
 
     <div class="contact-grid">
-      <!-- INFO -->
-      <div class="reveal-left">
-        <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin-bottom:8px;">Let's build something <span style="color:var(--accent-light);">great together</span></h3>
-        <p style="color:var(--text-muted);font-size:.9rem;">
-          I'm currently open to freelance projects and internship opportunities. If you have a project that needs some creative work, I'd love to hear about it.
-        </p>
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
+      <!-- LEFT GLASS CARD -->
+      <div class="contact-glass-card reveal-left">
+        <span class="cg-eyebrow">REACH OUT</span>
+        <h3 class="cg-title">Let's Work Together</h3>
+        <p class="cg-desc">I'm currently available for freelance projects and open to full-time opportunities. Let's build something amazing.</p>
+
+        <div class="cg-info-list">
+          <div class="cg-info-item">
+            <div class="cg-icon cg-icon-email">
               <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Email</div>
-              <div class="contact-info-value">mdrifadulhaquelimon@gmail.com</div>
+              <div class="cg-info-label">Email</div>
+              <div class="cg-info-value">mdrifadulhaquelimon@gmail.com</div>
             </div>
           </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <div class="cg-info-item">
+            <div class="cg-icon cg-icon-phone">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.29 6.29l1.12-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Phone / WhatsApp</div>
-              <div class="contact-info-value">+880 1644-881780</div>
+              <div class="cg-info-label">Phone</div>
+              <div class="cg-info-value">+880 1644-881780</div>
             </div>
           </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
+          <div class="cg-info-item">
+            <div class="cg-icon cg-icon-gh">
               <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">GitHub</div>
-              <div class="contact-info-value">MdRifadulHaqueLimon</div>
+              <div class="cg-info-label">GitHub</div>
+              <div class="cg-info-value">github.com/MdRifadulHaqueLimon</div>
             </div>
           </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
+          <div class="cg-info-item">
+            <div class="cg-icon cg-icon-li">
               <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">LinkedIn</div>
-              <div class="contact-info-value">linkedin.com/in/your-profile</div>
+              <div class="cg-info-label">LinkedIn</div>
+              <div class="cg-info-value">linkedin.com/in/mdrifadulhaquelimon</div>
             </div>
           </div>
         </div>
+
+        <div class="cg-separator"></div>
+
+        <!-- Connect With Me social icons -->
+        <div class="cg-connect-label">CONNECT WITH ME</div>
+        <div class="cg-socials">
+          <a href="https://github.com/MdRifadulHaqueLimon" target="_blank" rel="noopener" class="cg-social-btn" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mdrifadulhaquelimon/" target="_blank" rel="noopener" class="cg-social-btn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&to=mdrifadulhaquelimon@gmail.com" target="_blank" rel="noopener" class="cg-social-btn" title="Gmail">
+            <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
+
+        <!-- Available badge -->
+        <div class="cg-available-badge">
+          <span class="cg-avail-dot"></span>
+          Currently <strong>Available</strong> for freelance &amp; full-time roles
+        </div>
       </div>
 
-      <!-- FORM -->
-<div class="reveal-right">
-  <form class="contact-form" action="https://formspree.io/f/xnjralzr" method="POST">
-    <div class="form-row">
-      <div class="form-group">
-        <label for="fname">First Name</label>
-        <input id="fname" name="firstName" type="text" placeholder="John" required />
+      <!-- ✅ RIGHT GLASS CARD — Send Me a Message -->
+      <div class="contact-glass-card reveal-right">
+        <span class="cg-eyebrow">MESSAGE</span>
+        <h3 class="cg-title">Send Me a Message</h3>
+
+        <form class="contact-form" action="https://formspree.io/f/xnjralzr" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">YOUR NAME</label>
+              <input id="fname" name="firstName" type="text" placeholder="Justin Lee" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">YOUR EMAIL</label>
+              <input id="femail" name="email" type="email" placeholder="justin@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">SUBJECT</label>
+            <input id="fsubject" name="subject" type="text" placeholder="Project discussion, collaboration..." required />
+          </div>
+          <div class="form-group">
+            <label for="fmsg">YOUR MESSAGE</label>
+            <textarea id="fmsg" name="message" placeholder="Hello, I would like to talk about..." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message →
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="lname">Last Name</label>
-        <input id="lname" name="lastName" type="text" placeholder="Doe" required />
-      </div>
+
     </div>
-    <div class="form-group">
-      <label for="femail">Email Address</label>
-      <input id="femail" name="email" type="email" placeholder="john@example.com" required />
-    </div>
-    <div class="form-group">
-      <label for="fsubject">Subject</label>
-      <input id="fsubject" name="subject" type="text" placeholder="Project Inquiry" required />
-    </div>
-    <div class="form-group">
-      <label for="fmsg">Message</label>
-      <textarea id="fmsg" name="message" placeholder="Tell me about your project..." required></textarea>
-    </div>
-    <div class="form-submit">
-      <button type="submit" class="btn btn-primary">
-        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        Send Message
-      </button>
-    </div>
-  </form>
-</div>
+  </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
-    <div class="footer-inner">
-      <p class="footer-copy">© 2025 <span>Md. Rifadul Haque Limon</span>. Crafted with ❤️ &amp; lots of ☕</p>
-      <div class="footer-socials">
-        <a href="https://github.com/MdRifadulHaqueLimon" target="_blank" rel="noopener" class="social-link" title="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/mdrifadulhaquelimon/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
+
+    <!-- TOP ROW: 3 columns -->
+    <div class="footer-top">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">Md. Rifadul Haque <span>Limon</span></div>
+        <div class="footer-role">Frontend Developer &amp; Shopify Designer</div>
+        <p class="footer-tagline">Crafting clean, responsive web experiences — modern React apps, custom Shopify stores &amp; more.</p>
+        <div class="footer-open-badge">
+          <span class="footer-open-dot"></span> Open to new opportunities
+        </div>
       </div>
+
+      <!-- COL 2: Quick Links -->
+      <div class="footer-links-col">
+        <div class="footer-col-label">QUICK LINKS</div>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Connect -->
+      <div class="footer-connect-col">
+        <div class="footer-col-label">CONNECT</div>
+        <div class="footer-social-icons">
+          <!-- GitHub -->
+          <a href="https://github.com/MdRifadulHaqueLimon" target="_blank" rel="noopener" class="footer-icon-btn footer-icon-gh" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mdrifadulhaquelimon/" target="_blank" rel="noopener" class="footer-icon-btn footer-icon-li" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="https://mail.google.com/mail/?view=cm&to=mdrifadulhaquelimon@gmail.com" target="_blank" rel="noopener" class="footer-icon-btn footer-icon-email" title="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
+        <div class="footer-contact-info">
+          <div>mdrifadulhaquelimon@gmail.com</div>
+          <div>+880 1644-881780</div>
+        </div>
+      </div>
+
+    </div><!-- /footer-top -->
+
+    <!-- DIVIDER -->
+    <div class="footer-divider"></div>
+
+    <!-- BOTTOM ROW -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Md. Rifadul Haque Limon. All rights reserved.</p>
+      <!-- <p class="footer-built">Built with ⚛️ &amp; 🎨 with ❤️</p> -->
+      <button class="footer-back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to top ↑
+      </button>
     </div>
+
   </div>
 </footer>
+
+<!-- ===== GOOGLE TRANSLATE HIDDEN WIDGET ===== -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en', autoDisplay: false },
+      'google_translate_element'
+    );
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script src="app.js"></script>
 </body>
