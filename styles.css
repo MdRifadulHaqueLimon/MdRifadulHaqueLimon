@@ -3705,6 +3705,12 @@ html.light-mode .tt-sun   { opacity: 1; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 }
 
+/* ── MOBILE NAV FIX — hamburger show for all phones & small tablets ── */
+@media (max-width: 767px) {
+  nav, .nav-cta { display: none !important; }
+  .hamburger { display: flex !important; }
+}
+
 /* ── PRINT STYLES ── */
 @media print {
   header, .mob-overlay, .mobile-nav, .blob,
