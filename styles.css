@@ -3184,3 +3184,554 @@ html.light-mode .tt-sun   { opacity: 1; }
   .theme-toggle:not(.theme-toggle-sm) { display: none; }
 }
 
+
+/* ============================================================
+   FULLY RESPONSIVE — ALL SCREEN SIZES
+   Covers: 320px → 4K+ (phone, phablet, tablet, laptop, desktop, TV)
+============================================================ */
+
+/* ── ULTRA SMALL PHONES (320px – 374px) ── */
+@media (max-width: 374px) {
+  html { font-size: 14px; }
+
+  .container { padding: 0 14px; }
+
+  section { padding: 56px 0; }
+
+  #hero {
+    padding-top: 64px;
+    padding-bottom: 32px;
+    min-height: auto;
+  }
+
+  .hero-grid { gap: 16px; }
+
+  .hero-title {
+    font-size: clamp(1.45rem, 8.5vw, 1.85rem);
+    line-height: 1.2;
+  }
+
+  .hero-typing { font-size: .82rem; }
+
+  .hero-bio { font-size: .82rem; }
+
+  .hero-actions { gap: 10px; }
+
+  .btn { padding: 10px 18px; font-size: .8rem; }
+
+  .hc-card-scene { width: 210px; height: 300px; }
+
+  .hc-lanyard-strap { height: 40px; width: 20px; }
+
+  .hc-name { font-size: 1.05rem; padding: 8px 14px 3px; }
+
+  .hc-role { padding: 0 14px 10px; font-size: .72rem; }
+
+  .floating-badge { display: none; }
+
+  .section-title { font-size: clamp(1.4rem, 7vw, 1.8rem); }
+
+  .about-glass-card { padding: 18px 14px; border-radius: 14px; }
+
+  .agc-label { font-size: .95rem; }
+
+  .agc-icon { width: 40px; height: 40px; border-radius: 10px; }
+
+  .agc-icon svg { width: 18px; height: 18px; }
+
+  .agc-bring-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  .skill-card { padding: 16px 10px 12px; border-radius: 14px; }
+
+  .skill-icon-wrap { width: 50px; height: 50px; }
+
+  .skill-img { width: 28px; height: 28px; }
+
+  .skill-name { font-size: .72rem; }
+
+  .skills-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  .skill-stat-card { padding: 18px 10px; border-radius: 12px; }
+
+  .skill-stat-num { font-size: 1.6rem; }
+
+  .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  .project-thumb { height: 150px; }
+
+  .project-body { padding: 16px; }
+
+  .project-name { font-size: .97rem; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  .contact-glass-card { padding: 18px 14px; border-radius: 14px; }
+
+  .cg-title { font-size: 1.2rem; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .form-group input,
+  .form-group textarea { padding: 10px 12px; font-size: .85rem; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 24px; }
+
+  .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+
+  .mobile-nav { width: min(280px, 92vw); }
+
+  .mob-profile-name { font-size: .82rem; }
+
+  .mob-link { font-size: .8rem; padding: 10px 12px 10px 6px; }
+}
+
+/* ── SMALL PHONES (375px – 480px) ── */
+@media (min-width: 375px) and (max-width: 480px) {
+  .container { padding: 0 18px; }
+
+  section { padding: 64px 0; }
+
+  #hero {
+    padding-top: 72px;
+    padding-bottom: 36px;
+    min-height: auto;
+  }
+
+  .hero-title { font-size: clamp(1.6rem, 7.5vw, 2rem); }
+
+  .hc-card-scene { width: 230px; height: 325px; }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+  .skills-stats { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
+
+  .agc-bring-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .about-two-col { grid-template-columns: 1fr; }
+}
+
+/* ── LARGE PHONES / PHABLETS (481px – 599px) ── */
+@media (min-width: 481px) and (max-width: 599px) {
+  .container { padding: 0 20px; }
+
+  #hero { padding-top: 72px; }
+
+  .hc-card-scene { width: 248px; height: 350px; }
+
+  .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+  .skills-stats { grid-template-columns: repeat(2, 1fr); }
+
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .agc-bring-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* ── TABLETS PORTRAIT (600px – 767px) ── */
+@media (min-width: 600px) and (max-width: 767px) {
+  .container { padding: 0 28px; }
+
+  section { padding: 80px 0; }
+
+  #hero { padding-top: 90px; }
+
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .hero-card-wrap { order: -1; padding-top: 16px; }
+
+  .hc-card-scene { width: 268px; height: 375px; }
+
+  .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+  .skills-stats { grid-template-columns: repeat(2, 1fr); }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .agc-bring-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .about-two-col { grid-template-columns: 1fr; }
+
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-brand { grid-column: 1 / -1; }
+
+  .footer-bottom { gap: 10px; }
+}
+
+/* ── TABLETS LANDSCAPE (768px – 899px) ── */
+@media (min-width: 768px) and (max-width: 899px) {
+  .container { padding: 0 32px; }
+
+  section { padding: 88px 0; }
+
+  #hero { padding-top: 100px; }
+
+  .hero-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  .hc-card-scene { width: 272px; height: 382px; }
+
+  .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+  .skills-stats { grid-template-columns: repeat(4, 1fr); }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .agc-bring-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .about-two-col { grid-template-columns: 1fr 1fr; }
+
+  nav, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+
+  .footer-top { grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; }
+}
+
+/* ── SMALL LAPTOPS (900px – 1099px) ── */
+@media (min-width: 900px) and (max-width: 1099px) {
+  .container { padding: 0 36px; }
+
+  section { padding: 96px 0; }
+
+  .hero-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+
+  .hc-card-scene { width: 285px; height: 400px; }
+
+  .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+  .skills-stats { grid-template-columns: repeat(4, 1fr); }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .agc-bring-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .footer-top { grid-template-columns: 1.4fr 1fr 1fr; }
+
+  nav { gap: 24px; }
+  nav a { font-size: .8rem; }
+}
+
+/* ── STANDARD LAPTOPS (1100px – 1279px) ── */
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .container { max-width: 1060px; padding: 0 32px; }
+
+  .hero-grid { grid-template-columns: 1fr 1.1fr; gap: 40px; }
+
+  .hc-card-scene { width: 295px; height: 415px; }
+
+  .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+
+  .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 26px; }
+}
+
+/* ── HD DESKTOPS (1280px – 1439px) ── */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .container { max-width: 1160px; padding: 0 32px; }
+
+  .hero-grid { grid-template-columns: 1fr 1.1fr; gap: 48px; }
+
+  .hc-card-scene { width: 300px; height: 420px; }
+
+  .skills-grid { grid-template-columns: repeat(5, 1fr); gap: 18px; }
+
+  .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+}
+
+/* ── FULL HD (1440px – 1919px) ── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .container { max-width: 1300px; padding: 0 40px; }
+
+  section { padding: 110px 0; }
+
+  .hero-grid { grid-template-columns: 1fr 1.15fr; gap: 64px; }
+
+  .hero-title { font-size: clamp(2.8rem, 3.5vw, 3.6rem); }
+
+  .hc-card-scene { width: 320px; height: 450px; }
+
+  .hc-glow { width: 520px; height: 520px; }
+
+  .skills-grid { grid-template-columns: repeat(5, 1fr); gap: 20px; }
+
+  .skill-card { padding: 24px 16px 20px; }
+
+  .skill-icon-wrap { width: 70px; height: 70px; }
+
+  .skill-img { width: 38px; height: 38px; }
+
+  .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+  .project-thumb { height: 200px; }
+
+  .contact-grid { gap: 32px; }
+
+  .footer-top { gap: 56px; }
+
+  .section-title { font-size: clamp(2.4rem, 3vw, 3.2rem); }
+}
+
+/* ── 2K / QHD (1920px – 2559px) ── */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  html { font-size: 17px; }
+
+  .container { max-width: 1560px; padding: 0 48px; }
+
+  section { padding: 120px 0; }
+
+  .hero-grid { grid-template-columns: 1fr 1.15fr; gap: 80px; }
+
+  .hero-title { font-size: clamp(3rem, 3.2vw, 4rem); }
+
+  .hero-bio { font-size: 1.05rem; max-width: 500px; }
+
+  .hc-card-scene { width: 360px; height: 510px; }
+
+  .hc-glow { width: 600px; height: 600px; }
+
+  .hc-name { font-size: 1.55rem; }
+
+  .skills-grid { grid-template-columns: repeat(6, 1fr); gap: 22px; }
+
+  .skill-card { padding: 26px 18px 22px; border-radius: 22px; }
+
+  .skill-icon-wrap { width: 78px; height: 78px; border-radius: 18px; }
+
+  .skill-img { width: 42px; height: 42px; }
+
+  .skill-name { font-size: .88rem; }
+
+  .skill-stat-num { font-size: 2.4rem; }
+
+  .projects-grid { grid-template-columns: repeat(4, 1fr); gap: 30px; }
+
+  .project-thumb { height: 220px; }
+
+  .project-body { padding: 28px; }
+
+  .contact-grid { gap: 40px; }
+
+  .cg-title { font-size: 1.8rem; }
+
+  .section-title { font-size: clamp(2.6rem, 2.8vw, 3.6rem); }
+
+  .section-sub { font-size: 1.05rem; max-width: 580px; }
+
+  .footer-top { gap: 64px; }
+
+  .footer-logo { font-size: 1.5rem; }
+
+  .footer-tagline { font-size: .95rem; }
+
+  .about-glass-card { padding: 38px 36px; border-radius: 24px; }
+
+  .agc-bring-grid { gap: 30px; }
+}
+
+/* ── 4K / UHD (2560px+) ── */
+@media (min-width: 2560px) {
+  html { font-size: 20px; }
+
+  .container { max-width: 2000px; padding: 0 60px; }
+
+  section { padding: 140px 0; }
+
+  .hero-grid { grid-template-columns: 1fr 1.2fr; gap: 100px; }
+
+  .hero-title { font-size: clamp(3.5rem, 3vw, 5rem); }
+
+  .hero-bio { font-size: 1.1rem; max-width: 580px; }
+
+  .hero-badge { font-size: .85rem; padding: 8px 22px; }
+
+  .hc-card-scene { width: 440px; height: 620px; }
+
+  .hc-glow { width: 740px; height: 740px; filter: blur(60px); }
+
+  .hc-name { font-size: 1.85rem; }
+
+  .hc-role { font-size: .92rem; }
+
+  .skills-grid { grid-template-columns: repeat(7, 1fr); gap: 26px; }
+
+  .skill-card { padding: 30px 22px 26px; border-radius: 26px; }
+
+  .skill-icon-wrap { width: 90px; height: 90px; border-radius: 22px; }
+
+  .skill-img { width: 50px; height: 50px; }
+
+  .skill-name { font-size: 1rem; }
+
+  .skill-stat-num { font-size: 2.8rem; }
+
+  .skills-stats { grid-template-columns: repeat(4, 1fr); gap: 28px; }
+
+  .skill-stat-card { padding: 32px 20px; border-radius: 20px; }
+
+  .projects-grid { grid-template-columns: repeat(4, 1fr); gap: 36px; }
+
+  .project-thumb { height: 260px; }
+
+  .project-body { padding: 32px; }
+
+  .project-name { font-size: 1.3rem; }
+
+  .contact-grid { gap: 50px; }
+
+  .contact-glass-card { padding: 52px 48px; border-radius: 28px; }
+
+  .cg-title { font-size: 2.2rem; }
+
+  .section-title { font-size: clamp(3rem, 2.8vw, 4.5rem); }
+
+  .section-sub { font-size: 1.15rem; max-width: 680px; }
+
+  .footer-top { gap: 80px; padding-bottom: 64px; }
+
+  .footer-logo { font-size: 1.8rem; }
+
+  .footer-tagline { font-size: 1rem; max-width: 420px; }
+
+  .about-glass-card { padding: 48px 44px; border-radius: 28px; }
+
+  .agc-position-title { font-size: 1.5rem; }
+
+  .agc-label { font-size: 1.3rem; }
+
+  .agc-icon { width: 60px; height: 60px; border-radius: 18px; }
+
+  .agc-icon svg { width: 28px; height: 28px; }
+
+  .agc-bring-grid { gap: 36px; }
+
+  .btn { padding: 16px 36px; font-size: 1rem; }
+
+  .btn-primary { box-shadow: 0 0 36px var(--accent-glow); }
+
+  .social-link { width: 54px; height: 54px; }
+
+  .social-link svg { width: 24px; height: 24px; }
+
+  header { padding: 28px 0; }
+
+  nav { gap: 48px; }
+
+  nav a { font-size: 1rem; }
+
+  .logo { font-size: 1.5rem; }
+
+  .hamburger { display: none; }
+}
+
+/* ── TOUCH DEVICE OPTIMIZATIONS ── */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects that don't work on touch */
+  .skill-card:hover { animation: none; }
+
+  /* Larger tap targets for mobile */
+  nav a, .mob-link, .btn, .filter-tab,
+  .skill-filter-btn, .lang-option, .mob-lang-opt {
+    min-height: 44px;
+  }
+
+  .social-link, .cg-social-btn, .mob-social {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep card hover transform but no shake */
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05),
+                0 10px 36px rgba(0,0,0,0.55);
+  }
+}
+
+/* ── HIGH DPI / RETINA SCREENS ── */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper borders on retina */
+  .skill-card, .about-glass-card, .contact-glass-card,
+  .project-card, .floating-badge {
+    border-width: 0.5px;
+  }
+
+  /* Crisper scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+}
+
+/* ── LANDSCAPE PHONE SPECIFIC ── */
+@media (max-height: 500px) and (orientation: landscape) {
+  #hero {
+    min-height: auto;
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+
+  .hero-card-wrap { display: none; }
+
+  .hero-grid { grid-template-columns: 1fr; }
+
+  .hero-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+
+  section { padding: 50px 0; }
+
+  header { padding: 12px 0; }
+
+  .mobile-nav { width: 100%; height: 100dvh; }
+}
+
+/* ── FOLDABLE / ULTRA-WIDE PHONE ── */
+@media (min-width: 420px) and (max-width: 599px) and (min-height: 700px) {
+  .hc-card-scene { width: 260px; height: 366px; }
+
+  .hero-title { font-size: clamp(1.75rem, 7vw, 2.2rem); }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  header, .mob-overlay, .mobile-nav, .blob,
+  body::before, body::after, .floating-badge,
+  .hero-card-wrap, .scroll-animations { display: none !important; }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+  }
+
+  .container { max-width: 100%; padding: 0; }
+
+  section { padding: 20pt 0; page-break-inside: avoid; }
+
+  a { color: #000; text-decoration: underline; }
+
+  .section-title { color: #000 !important; font-size: 18pt; }
+
+  .about-glass-card, .contact-glass-card, .project-card, .skill-card {
+    border: 1pt solid #ccc;
+    background: #f9f9f9 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .btn-primary { background: #333 !important; color: #fff !important; }
+}
+
